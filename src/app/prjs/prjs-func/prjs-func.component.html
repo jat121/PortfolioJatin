@@ -1,0 +1,21 @@
+<div class="experience-card" wmAnimate="bumpIn" aos speed="normal">
+  <div [ngStyle]="{background: prj.color}" class="experience-banner">
+    <div class="experience-blurred_div"></div>
+    <div class="experience-div-company">
+      <h5 class="experience-text-company">{{prj.Name}}</h5>
+    </div>
+
+    <img crossOrigin="anonymous" class="experience-roundedimg" [src]="prj.companylogo" >
+<!--    <p>{{colors.myDominantColor}}</p>-->
+  </div>
+  <div class="experience-text-details">
+    <h5 class="experience-text-role">{{prj.Technologies_Used}}</h5>
+    <app-btn [link]="prj"></app-btn>
+    <p class="subTitle experience-text-desc">{{prj.desc}}</p>
+    <ul>
+      <li class="subTitle" *ngFor="let lis of prj.descBullets">{{lis}}</li>
+    </ul>
+  </div>
+</div>
+
+
